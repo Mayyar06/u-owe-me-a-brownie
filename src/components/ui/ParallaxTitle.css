@@ -1,0 +1,42 @@
+.parallax-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .025em;
+  margin: 0 0 40px;
+  perspective: 720px;
+  transform-style: preserve-3d;
+  font-family: var(--font-elegant);
+  font-size: clamp(2.4rem, 7vw, 4.7rem);
+  font-weight: 600;
+  letter-spacing: .045em;
+  line-height: 1.2;
+  user-select: none;
+}
+.parallax-glyph {
+  display: inline-block;
+  transform-style: preserve-3d;
+  transition: transform .22s ease-out;
+  will-change: transform;
+}
+.parallax-space { width: .35em; }
+.parallax-glyph-face {
+  display: block;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 0 #8b4260) drop-shadow(0 5px 0 #4b1e39) drop-shadow(0 11px 16px rgba(236, 108, 158, .48));
+  animation: glyphFloat 4.5s ease-in-out infinite;
+  animation-delay: var(--glyph-delay);
+}
+@keyframes glyphFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@media (max-width: 480px) {
+  .parallax-title { margin-bottom: 30px; font-size: clamp(2rem, 10vw, 2.8rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .parallax-glyph, .parallax-glyph-face { animation: none; transition: none; transform: none !important; }
+}

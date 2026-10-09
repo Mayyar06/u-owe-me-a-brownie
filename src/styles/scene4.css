@@ -1,0 +1,272 @@
+/* ===============================
+   SCENE 4 — MIDNIGHT FIREWORKS
+================================ */
+
+.scene4 {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(
+    circle at bottom,
+    #240b18 0%,
+    #020203 70%
+  );
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* 🌌 Night Stars */
+.scene4-stars {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.18;
+  animation: starsMove 140s linear infinite;
+  z-index: 0;
+}
+
+@keyframes starsMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-400px); }
+}
+
+/* 🎆 Fireworks Canvas */
+.fireworks-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 🎯 Center Content */
+.scene4-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+/* ✍️ SVG Wrapper */
+.name-svg {
+  width: 100%;
+  max-width: 560px;
+}
+
+/* ✍️ Handwritten Name */
+.name-text {
+  font-family: "Handwritten", "Pacifico", "Segoe Script", cursive;
+  font-size: 92px;
+  fill: none;
+  stroke: url(#birthday-gradient);
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  filter: drop-shadow(0 0 16px rgba(255,182,217,0.6));
+}
+
+/* ✨ Draw Animation */
+.name-svg.draw .name-text {
+  animation: writeName 7s ease forwards;
+}
+
+@keyframes writeName {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 💓 Heartbeat Flicker */
+.name-svg.heartbeat {
+  animation: heartbeatGlow 1.6s ease-in-out infinite;
+}
+
+@keyframes heartbeatGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 14px rgba(255,182,217,0.5));
+    transform: scale(1);
+  }
+  40% {
+    filter: drop-shadow(0 0 26px rgba(255,120,200,0.85));
+    transform: scale(1.015);
+  }
+}
+
+/* 🖋 Signature */
+.from-text {
+  font-size: 22px;
+  fill: rgba(255,255,255,0.85);
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+
+.name-svg.draw .from-text {
+  opacity: 1;
+}
+
+/* 🌸 Falling Petals */
+.petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.petal {
+  position: absolute;
+  top: -10%;
+  left: var(--petal-left);
+  width: var(--petal-size);
+  height: var(--petal-size);
+  background: radial-gradient(circle, #ffd6e8 0%, #ff9acb 70%);
+  border-radius: 60% 40% 60% 40%;
+  opacity: 0.85;
+  animation: fallPetal var(--petal-duration) var(--petal-delay) linear infinite;
+}
+
+.petal:nth-child(odd) {
+  opacity: 0.6;
+}
+
+@keyframes fallPetal {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+  }
+}
+
+
+/* 🕯️ Candle Glow */
+.candle-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(
+    circle at center,
+    rgba(255,190,120,0.18) 0%,
+    rgba(255,160,80,0.08) 30%,
+    rgba(0,0,0,0) 65%
+  );
+  animation: candleFlicker 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes candleFlicker {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 480px) {
+  .name-text {
+    font-size: 64px;
+    stroke-width: 2.6;
+  }
+
+  .from-text {
+    font-size: 18px;
+  }
+}
+/*  🌑 FINAL FADE TO BLACK */
+
+.scene4-fade {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  z-index: 6;
+  pointer-events: none;
+  transition: opacity 4s ease;
+}
+
+.scene4-fade.show {
+  opacity: 1;
+}
+
+/*💬 LAST WHISPER TEXT*/
+
+.whisper-text {
+  position: fixed;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-family: "Segoe Script", "Pacifico", cursive;
+  color: rgba(255, 220, 235, 0.9);
+  opacity: 0;
+  z-index: 7;
+  text-align: center;
+  letter-spacing: 0.5px;
+  animation: whisperFade 6s ease forwards;
+}
+
+@keyframes whisperFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px);
+  }
+  25% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px);
+  }
+}
+
+
+
+/* 📱 Mobile tweak */
+@media (max-width: 480px) {
+  .whisper-text {
+    font-size: 16px;
+    bottom: 20%;
+  }
+
+  .restart-btn {
+    font-size: 13px;
+    padding: 9px 18px;
+  }
+}
+
+.restart-btn {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #f6e7cc;
+  padding: 10px 22px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeInRestart 2s ease forwards;
+  animation-delay: 6s;
+}
+
+.restart-btn:hover {
+  background: rgba(86, 136, 97, 0.08);
+}
+
+@keyframes fadeInRestart {
+  to { opacity: 1; }
+}
+

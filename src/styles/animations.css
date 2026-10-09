@@ -1,0 +1,13 @@
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(243,164,200,0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(243,164,200,0.8);
+  }
+}

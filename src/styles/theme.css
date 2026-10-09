@@ -1,0 +1,11 @@
+:root {
+  --midnight: #020203;
+  --purple: #190810;
+  --indigo: #080305;
+  --pink: #f2a0b4;
+  --text-gradient: linear-gradient(120deg, #ffc2d5, #f193a8 55%, #d86676);
+  --rose-gold: #f6c1a2;
+
+  --font-romantic: "Dancing Script", cursive;
+  --font-elegant: "Playfair Display", serif;
+}
