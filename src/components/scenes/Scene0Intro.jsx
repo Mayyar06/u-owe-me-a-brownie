@@ -10,7 +10,7 @@ export default function Scene0Intro({ onNext }) {
   return (
     <div className="intro-scene">
       <SwirlingStars />
-      <p>This was specifically requested for you cause you deserve this and much much more I love u bbg 😘</p>
+      <p>This was specifically requested for you cause you deserve this and much much more I love u queen😘</p>
     </div>
   );
 }
