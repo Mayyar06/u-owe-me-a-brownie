@@ -14,7 +14,7 @@ export default function Scene1Landing({ onNext }) {
             }}
           >
             Happy Birthday Aiman ✨ <br />
-            Twenty looks beautiful on you
+            A little reminder of how loved you are, how much you've grown, and how many more memories we have left to make. Here's to your 21st chapter — may it be your best one yet.
           </span>
         }
         onClick={onNext}
