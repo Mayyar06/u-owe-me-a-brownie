@@ -2,7 +2,7 @@ export const letters = [
   {
     id: 1,
     title: "Beyond Our Usual Waters",
-    image: "",
+    image: "Aiman 1.jpeg",
     content:
       "This was our first outing together beyond Ras Alkahimah can you believe?? 2 years and this is the first time we've ever been out Ras Alkhaimah😭. But anyways it was sooo fun (not the part where we were stuck in traffic for 4 hours🤣) , it was our first roadtrip and i really enjoyed all the games we played, hopefully will repeat when we go to dubai again🤩. Side not: I'm proud of you for actually wanting to network with professionals (i myslef did not want to but got inspired by you😂) "
   },
