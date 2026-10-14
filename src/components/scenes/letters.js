@@ -16,14 +16,14 @@ export const letters = [
   {
     id: 3,
     title: "Our First of Many ",
-    image: "Aiman 3.jpeg",
+    image: "Aiman 3.1.jpeg",
     content:
       "OMG these dam univ classes where they forced us to go to confrences😂, i think this was our first one, lowkey this is such a core memory for me, cause this was like the veryyy begining of when i was still getting to know you and we were just doing everything together since the begining😂like just looking at this makes me feel so nostalgic🥹 I'm very grateful that i got to meet a wonderful friend like you, which makes me very grateful that we met in STAT class like that was the begining of EVERY amazing thing that happened between us, good and bad. .  "
   },
   {
     id: 4,
     title: "Our First Finish Line ",
-    image: "Aiman 4.jpeg",
+    image: "Aiman 4.1.jpeg",
     content:
        "HAHAHA i dont knowhow to feel about this one, it was such an adventure, literally our first physical activity, but im proud cause we participated. It was a very hot day and we were so tired but im so happy we did this together, we HAVE to do it again this year😋, i think the best part about these faraway outings is the bus ride with you cause it feels like a roadtrip and we're never bored together🫶"
   },
